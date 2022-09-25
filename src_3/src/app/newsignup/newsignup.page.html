@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons solt="start">
+      <ion-back-button defaultHref="/tabs/tab1"></ion-back-button>
+      <ion-title>Register</ion-title>
+      <!-- <ion-buttons solt="end">
+        <ion-button class="buttonHover" fill="outline" expand="block" color="medium" size="small" [routerLink]="['/newlogin']">Login</ion-button>
+      </ion-buttons> -->
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form>
+    <ion-item lines="full">
+      <ion-label position="floating">Surname</ion-label>
+      <ion-input id="re_surname" types="text" required ></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Givenname</ion-label>
+      <ion-input id="re_givenname" types="text" required></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input id="re_email" types="text" required ></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input id="re_password" types="text" reqired ></ion-input>
+    </ion-item>
+
+
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="warning" expand="block" (click)="customizeLoader()">Register</ion-button>
+        <ion-button class="buttonHover" fill="outline" expand="block" color="medium" size="small" [routerLink]="['/newlogin']">Login</ion-button>
+        <!-- <a [routerLink]="['/routePath']" class="small-text">Member login</a> -->
+        <a id="forgotPw" [routerLink]="['/tabs/tab1']" class="small-text">Home Page</a>
+     
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>
