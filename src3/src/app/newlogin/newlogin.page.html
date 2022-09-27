@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons solt="start">
+      <ion-back-button defaultHref="/tabs/tab1"></ion-back-button>
+      <ion-title>Login</ion-title>
+      <!-- <ion-buttons solt="end">
+        <ion-button class="buttonHover" fill="outline" color="medium" [routerLink]="['/newsignup']">Register</ion-button>
+      </ion-buttons> -->
+    </ion-buttons>
+  </ion-toolbar>
+  
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="contactForm" (ngSubmit)="submitForm()" (keydown.enter)="submitForm()" (keyup.enter)="customizeLoader()" novalidate>
+    <ion-item lines="full">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input formControlName="loginEmail" types="text" required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input formControlName="loginPassword" types="text" reqired ></ion-input>
+    </ion-item>
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="warning" expand="block" [disabled]="!contactForm.valid" (click)="customizeLoader()">Login</ion-button>
+        <ion-button class="buttonHover" fill="outline" expand="block" color="medium" size="small" [routerLink]="['/newsignup']">Register</ion-button>
+        <a id="forgotPw" [routerLink]="['/routePath']" class="small-text">Forgot Password</a>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>
