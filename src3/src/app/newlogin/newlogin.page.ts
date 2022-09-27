@@ -13,7 +13,7 @@ export class NewloginPage implements OnInit {
   data:any;
   contactForm = new FormGroup({
     loginEmail: new FormControl('', [Validators.required,Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')]),
-    loginPassword: new FormControl('', [Validators.required,Validators.minLength(8)])
+    loginPassword: new FormControl('', [Validators.required,Validators.minLength(4)])
   });
   constructor(private ionLoaderService: IonLoaderService,
     public formBuilder: FormBuilder,

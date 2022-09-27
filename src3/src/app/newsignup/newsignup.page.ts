@@ -14,7 +14,7 @@ export class NewsignupPage implements OnInit {
   data:any;
   contactForm = new FormGroup({
     reEmail: new FormControl('', [Validators.required,Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')]),
-    rePassword: new FormControl('', [Validators.required,Validators.minLength(8)]),
+    rePassword: new FormControl('', [Validators.required,Validators.minLength(4)]),
     reSurname: new FormControl('', [Validators.required,Validators.minLength(3)]),
     reGivenname: new FormControl('', [Validators.required,Validators.minLength(3)])
   });
