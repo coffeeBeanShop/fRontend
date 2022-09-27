@@ -41,8 +41,8 @@ export class NewsignupPage implements OnInit {
     console.log(this.contactForm.value.reGivenname);
     let surname = this.contactForm.value.reSurname;
     let givenname = this.contactForm.value.reGivenname;
-    let email = this.contactForm.value.reGivenname;
-    let pwd = this.contactForm.value.reGivenname;
+    let email = this.contactForm.value.reEmail;
+    let pwd = this.contactForm.value.rePassword;
     console.log(surname);
     this.data.push({surname,givenname,email,pwd});
     console.log(this.data);
