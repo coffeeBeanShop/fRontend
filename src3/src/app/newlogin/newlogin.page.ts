@@ -12,7 +12,7 @@ import { ToastController } from '@ionic/angular';
 export class NewloginPage implements OnInit {
   data:any;
   contactForm = new FormGroup({
-    loginEmail: new FormControl('', [Validators.required,Validators.pattern('^[a-zA-Z0-0_9.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-0-.]+$')]),
+    loginEmail: new FormControl('', [Validators.required,Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')]),
     loginPassword: new FormControl('', [Validators.required,Validators.minLength(8)])
   });
   constructor(private ionLoaderService: IonLoaderService,
