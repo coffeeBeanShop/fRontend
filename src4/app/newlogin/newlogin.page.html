@@ -1,0 +1,85 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons solt="start">
+      <ion-back-button defaultHref="/tabs/tab1"></ion-back-button>
+      <ion-title>Login</ion-title>
+      <!-- <ion-buttons solt="end">
+        <ion-button class="buttonHover" fill="outline" expand="block" color="medium" size="small" [routerLink]="['/newlogin']">Login</ion-button>
+      </ion-buttons> -->
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <!-- <ion-toolbar>
+      <ion-title size="large">Tab 1</ion-title>
+    </ion-toolbar> -->
+  </ion-header>
+  <div class="title">
+    <p>Welcome</p>
+    <p>Coffee Bean House</p>
+    <p>Showcase pic</p>
+  </div>
+  <div class="logo" >
+    <img src="assets/data/logo.png" alt="logo">
+  </div>
+  <form [formGroup]="contactForm" (ngSubmit)="submitForm()" (keydown.enter)="submitForm()" (keyup.enter)="customizeLoader()" novalidate>
+  <ion-card>
+      <ion-card-header>
+       <ion-item-divider>
+        <ion-label class="signin">
+          ☕Sign In
+        </ion-label>
+      </ion-item-divider>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item lines="full">
+          <ion-label position="fixed">User Name</ion-label>
+          <ion-input formControlName="loginEmail" types="text" required></ion-input>
+        </ion-item>
+        <ion-item lines="full">
+          <ion-label position="fixed">Password</ion-label>
+          <ion-input formControlName="loginPassword" types="text" required></ion-input>
+        </ion-item>
+        <ion-buttons>
+          <ion-button color="secondary" fill="solid">SIGN IN</ion-button>
+        </ion-buttons>
+        <ion-icon ios="ios-cafe" md="md-cafe"></ion-icon>
+        <ion-item-divider>
+          
+          <ion-label class="signin">
+            ☕New User
+          </ion-label>
+        </ion-item-divider>
+        <ion-buttons>
+          <ion-button color="secondary" fill="solid">Register</ion-button>
+        </ion-buttons>
+      </ion-card-content>
+        </ion-card>
+  </form>
+<!-- 
+<ion-card>
+<ion-content>
+  <div class="center">
+    <form [formGroup]="contactForm" (ngSubmit)="submitForm()" (keydown.enter)="submitForm()" (keyup.enter)="customizeLoader()" novalidate>
+      <ion-item lines="full">
+        <ion-label position="floating">Email</ion-label>
+        <ion-input formControlName="loginEmail" types="text" required></ion-input>
+      </ion-item>
+      <ion-item lines="full">
+        <ion-label position="floating">Password</ion-label>
+        <ion-input formControlName="loginPassword" types="text" reqired ></ion-input>
+      </ion-item>
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit" color="warning" expand="block" [disabled]="!contactForm.valid" (click)="customizeLoader()">Login</ion-button>
+          <ion-button class="buttonHover" fill="outline" expand="block" color="medium" size="small" [routerLink]="['/newsignup']">Register</ion-button>
+          <a id="forgotPw" [routerLink]="['/routePath']" class="small-text">Forgot Password</a>
+        </ion-col>
+      </ion-row>
+    </form>
+  </div>
+</ion-content>
+</ion-card> -->
+  

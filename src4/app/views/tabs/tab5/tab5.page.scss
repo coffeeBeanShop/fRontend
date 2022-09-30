@@ -1,0 +1,39 @@
+
+.logo img{
+    border-radius: 100%;
+    width: 60px;
+    height: 60px;
+    float: left;
+}
+.flex{
+    display: flex;
+    justify-content:center;
+    margin: 5px;
+}
+.itembox{
+    border: 2px solid red;
+    border-radius: 5%;
+}
+.itembox img{
+    height: 60px;
+}
+p{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+ion-title{
+    margin-left: 10%;
+}
+.plus{
+    border: 1px solid black;
+    padding: 5px;
+    height: 30px;
+    display: inline-block;
+    position: relative;
+    top:5px;
+}
+.item{
+    border: 1px solid blue;
+    margin: 5px;
+    border-radius: 5%;
+}
