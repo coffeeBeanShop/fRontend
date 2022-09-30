@@ -1,0 +1,15 @@
+.buttonHover:hover  {
+    // border: 1px solid rgba(138, 138, 138, 0.38);
+    background-color: rgba(138, 138, 138, 0.38);
+}
+ion-buttons{
+    margin: 10px;
+    align-items: center; 
+    justify-content: center;
+}
+ion-button{
+    min-width: 100px;
+}
+.signup{
+    font-size:3vh;
+}

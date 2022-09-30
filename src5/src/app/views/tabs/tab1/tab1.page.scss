@@ -1,0 +1,30 @@
+ion-card{
+    margin: 10px;
+    background-color: white;
+    border-radius: 1vh;
+    // box-shadow: 3px 3px;
+}
+ion-title{
+    text-align: center;
+}
+ion-card-content{
+    text-align: center;
+}
+ion-buttons{
+    margin-bottom: 20px;
+    align-items: center; 
+    justify-content: center;
+}
+ion-button{
+    // box-shadow: 1px 1px;
+    min-width: 80px;
+
+}
+.buttonHover:hover  {
+    // border: 1px solid rgba(138, 138, 138, 0.38);
+    background-color: rgba(138, 138, 138, 0.1);
+}
+
+// ion-content{
+//     --ion-background-color:rgba(240, 235, 235, 0.8);
+// }
