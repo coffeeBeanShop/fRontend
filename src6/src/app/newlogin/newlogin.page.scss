@@ -1,0 +1,42 @@
+.buttonHover:hover  {
+    // border: 1px solid rgba(138, 138, 138, 0.38);
+    background-color: rgba(138, 138, 138, 0.38);
+}
+#forgotPw{
+    text-decoration:none;
+    margin: 5px;
+}
+ion-card{
+    width: 100%;
+    margin: 5px;
+}
+.title,ion-card-content{
+    margin: 10px;
+    text-align: center;
+}
+ion-buttons{
+    margin: 10px;
+    align-items: center; 
+    justify-content: center;
+}
+ion-button{
+    min-width: 100px;
+}
+
+
+.signin{
+    font-size:3vh;
+}
+.center{
+    height: 50vh;
+    width: 80%;
+    background: #fff;
+    top:100px;
+    position: fixed;
+}
+div img{
+    margin-left: 60%;
+    border-radius: 100%;
+    width: 60px;
+    height: 60px;
+}

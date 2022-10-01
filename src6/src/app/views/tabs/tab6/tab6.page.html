@@ -1,0 +1,112 @@
+<app-header title="Tab 2"></app-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <!-- <ion-toolbar>
+      <ion-title size="large">Tab 1</ion-title>
+    </ion-toolbar> -->
+  </ion-header>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Order Confirmation Page</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card>
+
+  </ion-card>
+  <ion-row>
+    <ion-col *ngFor="let item of features" size="15">
+  <ion-card>
+    <ion-item href="#" class="ion-activated">
+      <img src="../../../../{{ item?.src }}">
+      <div class="flex">
+        <ion-label>
+          <p><b>{{ item?.name }}</b></p>
+        </ion-label>
+        <ion-label>
+          <p>Details</p>
+        </ion-label>
+        <ion-label>
+          <p>Price 100g $999</p>
+        </ion-label>
+      </div>
+    </ion-item>
+  </ion-card>
+  </ion-col>
+  </ion-row>
+  <ion-buttons>
+    <ion-button fill="outline" color="secondary" id="edit">Edit</ion-button>
+  </ion-buttons>
+  <div class="flex">
+    <ion-card class="ship">
+      <div class="flex">
+        <div class="ion-activated2">
+          <ion-item class="address">
+            <label></label>
+          </ion-item>
+        </div>
+      </div>
+      
+      <ion-item class="ion-activated">
+
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+          <label class="form-check-label" for="flexRadioDefault1">
+          </label>
+        </div>
+
+        <div class="shipimg">
+          <img src="assets/data/2435390.png">
+        </div>
+
+        <div class="flex">
+          <p><b>Store Pickup</b></p>
+          
+        </div>
+        
+      </ion-item>
+      <div class="flex">
+        <div class="ion-activated2">
+          <ion-item class="address">
+            <label>Address:Lorem ipsum dolor si</label>
+          </ion-item>
+        </div>
+      </div>
+
+      <div class="flex">
+        <ion-item class="ion-activated">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+            <label class="form-check-label" for="flexRadioDefault1">
+            </label>
+          </div>
+          <img src="assets/data/3134342.png">
+          <div>
+            <p><b>Delivery $30</b></p>
+          </div>
+        </ion-item>
+      </div>
+
+    </ion-card>
+    <div class="flex">
+      <div class="center">
+        <ion-label class="shippinaddress">
+          <p><b>Shipping Address:</b></p>
+        </ion-label>
+        <div>
+          <input type="text" class="addressinput">
+        </div>
+        <div><br>
+          <ion-label class="total">
+            <p><b>Total:783</b></p>
+          </ion-label>
+        </div>
+      </div>
+        <ion-buttons>
+          <ion-button fill="outline" color="secondary">Submit</ion-button>
+        </ion-buttons>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons solt="start">
+      <ion-back-button defaultHref="/tabs/tab1"></ion-back-button>
+      <ion-title>Register</ion-title>
+      <!-- <ion-buttons solt="end">
+        <ion-button class="buttonHover" fill="outline" expand="block" color="medium" size="small" [routerLink]="['/newlogin']">Login</ion-button>
+      </ion-buttons> -->
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card-header>
+    <ion-item-divider>
+     <ion-label class="signup">
+      ☕Register as our member
+     </ion-label>
+   </ion-item-divider>
+   </ion-card-header>
+  <form [formGroup]="contactForm" (ngSubmit)="submitForm()" (keydown.enter)="submitForm()" (keyup.enter)="customizeLoader()" novalidate>
+    <ion-item lines="full">
+      <ion-label position="floating">Surname</ion-label>
+      <ion-input formControlName="reSurname" types="text" required ></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Givenname</ion-label>
+      <ion-input formControlName="reGivenname" types="text" required></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input formControlName="reEmail" types="text" required ></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input formControlName="rePassword" types="text" reqired ></ion-input>
+    </ion-item>
+    
+    <ion-item lines="full">
+      <ion-label position="floating">Password2</ion-label>
+      <ion-input formControlName="rePassword2" types="text" reqired ></ion-input>
+    </ion-item>
+
+
+    <ion-buttons>
+      <ion-button type="submit" expand="block" (click)="customizeLoader()" [disabled]="!contactForm.valid" color="secondary" fill="solid">Register</ion-button>
+    </ion-buttons>
+    <ion-buttons>
+      <ion-button color="medium" fill="solid">SIGN IN</ion-button>
+    </ion-buttons>
+    <!-- <ion-button class="buttonHover" fill="outline" expand="block" color="medium" size="small" [routerLink]="['/newlogin']">Login</ion-button>
+    <a [routerLink]="['/routePath']" class="small-text">Member login</a> -->
+    <a id="forgotPw" [routerLink]="['/tabs/tab3']" class="small-text">Home Page</a>
+  </form>
+</ion-content>

@@ -1,0 +1,36 @@
+<app-header title="Tab 2"></app-header>
+
+<ion-content fullscreen="true">
+  <ion-title align="center">Category</ion-title>
+  <div class="cart-items">
+    <ion-row>
+      <ion-col *ngFor="let item of features" size="15">
+    <ion-card mode="ios">
+      <ion-card-content>
+        <div class="item-img">
+          <img src="../../../../{{ item?.src }}" />
+        </div>
+
+        <div class="item-info">
+          <p>{{ item?.name }}</p>
+          <p>{{ item?.src }}</p>
+          <p>{{ item?.price }}</p>
+
+          <div class="qty-selector">
+            <ion-button fill="clear">-</ion-button>
+            <ion-label>1</ion-label>
+            <ion-button fill="clear">+</ion-button>
+            <ion-buttons>
+              <ion-button color="danger" fill="solid">Delete</ion-button>
+            </ion-buttons>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </ion-col>
+  </ion-row>
+  </div>
+  <ion-buttons>
+    <ion-button color="secondary" fill="solid">Add to Cart</ion-button>
+  </ion-buttons>
+</ion-content>
