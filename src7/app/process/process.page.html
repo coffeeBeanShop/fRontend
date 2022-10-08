@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>process</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen="true">
+  <div class="cart-items">
+    <ion-row>
+      <ion-col *ngFor="let item of features" size="15">
+    <ion-card mode="ios">
+      <ion-card-content>
+
+        <div class="item-info">
+          <p><b>Order No.{{ item?.id }}</b></p>
+          <p>{{ item?.name }}</p>
+          <p>{{ item?.src }}</p>
+          <p>{{ item?.price }}</p>
+
+          <div class="qty-selector">
+            <ion-buttons>
+              <ion-button color="{{ item?.page }}" fill="solid">{{item?.background}}</ion-button>
+            </ion-buttons>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </ion-col>
+  </ion-row>
+  </div>
+</ion-content>

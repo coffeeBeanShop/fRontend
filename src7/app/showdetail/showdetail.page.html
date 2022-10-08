@@ -1,0 +1,145 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>page</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-back-button defaultHref="/tabs/tab11"></ion-back-button>
+  </ion-buttons>
+  <ion-searchbar placeholder="Search"></ion-searchbar>
+</ion-toolbar>
+<ion-content [fullscreen]="true">
+  <ion-card>
+        <div class="item">
+          <ion-card>
+            
+            <ion-slides>
+              
+              <ion-slide>
+                <img src="assets/img/pa2_2.jpg">
+              </ion-slide>
+              
+              <ion-slide>
+                <img src="assets/img/pa2_2.jpg">
+              </ion-slide>
+              
+              <ion-slide>
+                <img src="assets/img/pa2_2.jpg">
+              </ion-slide>
+              
+            </ion-slides>
+          </ion-card>
+          
+          
+          <ion-card class="itemd">
+            <div class="paddingitemaname">
+              <h1 class="itemname">Banana</h1>
+              <h4 class="price">
+                $30<span class="realprice">/100g</span>
+              </h4>
+              <div class="review">
+                <ion-row>
+                  <ion-col size="6">
+                    
+                    <div class="rating">4.5/5</div>
+
+                  </ion-col>
+                  <ion-col size="6">
+                    <div class="count">49 Reviews</div>
+                  </ion-col>
+                </ion-row>
+              </div>
+            </div>
+            <div class="seperator">
+              <hr/>
+            </div>
+
+            <div class="seperator">
+              <hr/>
+            </div>
+
+            <div class="description">
+
+              <h5>Description</h5>
+              <p>
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, necessitatibus amet maiores asperiores officia aperiam numquam tempore nulla labore veniam laboriosam autem accusantium incidunt nemo quaerat accusamus voluptatibus? Odio, illo.
+              </p>
+
+            </div>
+          </ion-card>
+          <ion-card class="select">
+
+            <div class="seperator">
+              <hr/>
+            </div>
+
+            <div class="variation">
+              <ion-segment (ionChange)="segmentChanged($event)" value="size">
+                <ion-segment-button value="size">
+                  <ion-label>Size</ion-label>
+                </ion-segment-button>
+                <ion-segment-button value="ship">
+                  <ion-label>Ship</ion-label>
+                </ion-segment-button>
+              </ion-segment>
+            </div>
+
+            <div class="seperator">
+              <hr/>
+            </div>
+
+            <div class="variation-selector">
+              <div class="sizes" [class.active-variation]="activeVariation=='size'">
+                <div [class.active]="selectedSize==1" (click)="changeSize(1)">
+                  XS
+                </div>
+                <div [class.active]="selectedSize==2" (click)="changeSize(2)">
+                  S
+                </div>
+                <div [class.active]="selectedSize==3" (click)="changeSize(3)">
+                  M
+                </div>
+                <div [class.active]="selectedSize==4" (click)="changeSize(4)">
+                  L
+                </div>
+                <div [class.active]="selectedSize==5" (click)="changeSize(5)">
+                  XL
+                </div>
+              </div>
+
+              <div class="ships" [class.active-variation]="activeVariation=='ship'">
+                <div [class.active]="selectedship==1" (click)="changeship(1)">
+                  Pick up
+                </div>
+                <div [class.active]="selectedship==2" (click)="changeship(2)">
+                  Delivery
+                </div>
+              </div>
+            </div>
+            <ion-buttons>
+              <ion-button color="secondary" fill="solid">Add to Cart</ion-button>
+            </ion-buttons>
+          </ion-card>
+          </div>
+          <!-- <ion-buttons class="flex">
+            <ion-button color="secondary" fill="solid">Add to Cart</ion-button>
+          </ion-buttons> -->
+          <!-- <ion-buttons>
+            <ion-button fill="outline" color="medium" size="small">LOGIN</ion-button>
+            <ion-button fill="outline" color="medium" size="small">REGISTER</ion-button>
+          </ion-buttons> -->
+    </ion-card>
+  </ion-content>
+  <ion-footer>
+    <ion-row>
+      <ion-col size="6">
+        <ion-button expand="full" color="light">Add to cart</ion-button>
+      </ion-col>
+      
+      <ion-col size="6">
+        <ion-button expand="full" color="light">Buy now</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-footer>
+  
