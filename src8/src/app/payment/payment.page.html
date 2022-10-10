@@ -1,0 +1,100 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <!-- <ion-toolbar>
+      <ion-title size="large">Tab 1</ion-title>
+    </ion-toolbar> -->
+  </ion-header>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Select a payment method</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+  <div class="flex">
+    <ion-card class="ship">
+
+
+      <div class="flex">
+        <ion-item class="ion-activated">
+          <img src="assets/data/2838907.png">
+          <div>
+            <p><b>Bank Transfer</b></p>
+          </div>
+          <div class="flexform">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+            <label class="form-check-label" for="flexRadioDefault1">
+            </label></div>
+          </div>
+        </ion-item>
+      </div>
+      <div class="center">
+        <ion-label class="shippinaddress">
+          <p><b>Payment Details</b></p>
+          <p>detail detail detail detail detail detail detail</p>
+        </ion-label>
+        <div>
+        </div>
+      </div>
+    </ion-card>
+    <ion-card class="ship">
+
+
+      <div class="flex">
+        <ion-item class="ion-activated">
+          <img src="assets/data/logo_payme_en.png" id="payme">
+
+          <div class="flexform">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+            <label class="form-check-label" for="flexRadioDefault1">
+            </label></div>
+          </div>
+        </ion-item>
+      </div>
+      <div class="center">
+        <ion-label class="shippinaddress">
+          <p><b>Payment Details</b></p>
+          <p>detail detail detail detail detail detail detail</p>
+        </ion-label>
+        <div>
+        </div>
+      </div>
+    </ion-card>
+    <div class="flex">
+
+
+
+
+      <ion-buttons>
+        <ion-button fill="outline" color="secondary" routerLink="/order">Submit</ion-button>
+      </ion-buttons>
+
+    </div>
+  </div>
+</ion-content>
+<ion-toolbar>
+  <ion-tabs class="zindex">
+    <!-- Tab bar -->
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button routerLink="/home" tab="speakers">
+        <ion-icon name="home"></ion-icon>
+        <ion-label>HOME</ion-label>
+      </ion-tab-button>
+      <ion-tab-button routerLink="/login" tab="about">
+        <ion-icon name="person-circle"></ion-icon>
+        <ion-label>USER</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+  </ion-toolbar>

@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content fullscreen="true">
+  <ion-title align="center">Category</ion-title>
+  <div class="cart-items">
+    <ion-row>
+      <ion-col *ngFor="let item of features" size="15">
+    <ion-card mode="ios">
+      <ion-card-content>
+        <div class="item-img">
+          <img src="../../../../{{ item?.src }}" />
+        </div>
+
+        <div class="item-info">
+          <p>{{ item?.name }}</p>
+          <p>{{ item?.src }}</p>
+          <p>{{ item?.price }}</p>
+
+          <div class="qty-selector" #item>
+            <ion-button fill="clear" (click)="btn_click()">-</ion-button>
+            <!-- <ion-label>1</ion-label> -->
+              <input text-center style="text-align:center;width:50px;" #inp class="text-center" id="{{item?.name}}" type="number" value="{{item?.page}}"  min="0">
+
+            <ion-button fill="clear" (click)="btn_clickadd()">+</ion-button>
+            <ion-buttons>
+              <ion-button color="danger" fill="solid">Delete</ion-button>
+            </ion-buttons>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </ion-col>
+  </ion-row>
+  </div>
+  <ion-buttons>
+    <ion-button color="secondary" fill="solid" routerLink="/confirmpage">ADD</ion-button>
+  </ion-buttons>
+  <ion-card *ngFor="let product of features; let index=index">
+    <ion-button fill="clear" (click)="inc()">+</ion-button>
+    <strong>{{ product?.page  }}</strong>
+    
+  </ion-card>
+</ion-content>
+<ion-toolbar>
+  <ion-tabs class="zindex">
+    <!-- Tab bar -->
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button routerLink="/home" tab="speakers">
+        <ion-icon name="home"></ion-icon>
+        <ion-label>HOME</ion-label>
+      </ion-tab-button>
+      <ion-tab-button routerLink="/login" tab="about">
+        <ion-icon name="person-circle"></ion-icon>
+        <ion-label>USER</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+  </ion-toolbar>

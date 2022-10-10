@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen="true">
+  <div class="cart-items">
+    <ion-row>
+      <ion-col *ngFor="let item of features" size="15">
+    <ion-card mode="ios">
+      <ion-card-content>
+
+        <div class="item-info">
+          <p><b>Order No.{{ item?.id }}</b></p>
+          <p>{{ item?.name }}</p>
+          <p>{{ item?.src }}</p>
+          <p>{{ item?.price }}</p>
+
+          <div class="qty-selector">
+            <ion-buttons>
+              <ion-button color="{{ item?.page }}" fill="solid" class="ionb">{{item?.background}}</ion-button>
+            </ion-buttons>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </ion-col>
+  </ion-row>
+  </div>
+  
+</ion-content>
+<ion-toolbar>
+  <ion-tabs class="zindex">
+    <!-- Tab bar -->
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button routerLink="/home" tab="speakers">
+        <ion-icon name="home"></ion-icon>
+        <ion-label>HOME</ion-label>
+      </ion-tab-button>
+      <ion-tab-button routerLink="/login" tab="about">
+        <ion-icon name="person-circle"></ion-icon>
+        <ion-label>USER</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+  </ion-toolbar>

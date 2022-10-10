@@ -1,0 +1,58 @@
+ion-slide{
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    height: 200px;
+    z-index: 1;
+}
+.cate3{//1
+    width: 100%;
+    height:200px;
+    position: absolute;
+    top: 328px;
+    left: -10px;
+    z-index: 1;
+    max-height: 100px;
+    ion-slide{
+        img{
+            position: relative;
+            top: -60px;
+            height: 100%;
+            width: 188px;
+        }
+    }
+}
+.cate{
+    width: 100%;
+    height:200px;
+    position: absolute;
+    top:438px;
+    left: -10px;
+    z-index: 2;
+    max-height: 200px;
+    ion-slide{
+        img{
+            position: relative;
+            top: -60px;
+            height: 188px;
+            width: 188px;
+        }
+    }
+}
+.cate2{//3
+    width: 100%;
+    height:300px;
+    position: absolute;
+    top: 550px;
+    left: -10px;
+    z-index: 3;
+    max-height: 210px;
+    ion-slide{
+        img{
+            position: relative;
+            top: -60px;
+            height: 88px;
+            width: 88px;
+        }
+    }
+}
