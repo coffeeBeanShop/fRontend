@@ -17,6 +17,7 @@ source ~/.bash_profile
 composer global require "laravel/installer"
 
 vim ~/.bash_profile
+
 export PATH="~/.composer/vendor/bin:$PATH"
 
 
